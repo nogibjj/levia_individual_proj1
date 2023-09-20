@@ -2,6 +2,9 @@ import os
 import polars as pl
 import matplotlib.pyplot as plt
 
+plt.rcParams['font.sans-serif']=['SimHei'] #Show Chinese label
+plt.rcParams['axes.unicode_minus']=False
+
 def read_csv(file_path):
     return pl.read_csv(file_path)
 
@@ -11,6 +14,7 @@ def calculate_statistics(data):
     return data.describe()
 
 def visualize_data(data, save_path):
+     
     if not isinstance(data, pl.DataFrame):
         raise ValueError("Input is not a Polar DataFrame")
         # Create a directory to store the plots if save_path is provided
