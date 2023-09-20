@@ -23,18 +23,15 @@ def visualize_data(data, save_path):
 
         # Iterate over each numeric column and create a histogram
     histogram_paths = []
-    for col in data.columns:
-        plt.figure(figsize=(8, 6))
-        plt.hist(data[col], bins=20, edgecolor='k', alpha=0.7)
-        plt.xlabel(col)
-        plt.ylabel("Frequency")
-        plt.title(f"Histogram of {col}")
-        plt.grid(True)
-        if save_path:
-            histogram_path = os.path.join(save_path, f"{col}_histogram.png")
-            plt.savefig(histogram_path)
-            plt.close()
-            histogram_paths.append(histogram_path)
-        else:
-            plt.show()
+    plt.figure(figsize=(8, 6))
+    plt.hist(data["energy"], bins=20, edgecolor='k', alpha=0.7)
+    plt.xlabel("energy")
+    plt.ylabel("Frequency")
+    plt.title(f"Histogram of energy")
+    plt.grid(True)
+    if save_path:
+        histogram_path = os.path.join(save_path, f"energy_histogram.png")
+        plt.savefig(histogram_path)
+        plt.close()
+        histogram_paths.append(histogram_path)
     return histogram_paths
