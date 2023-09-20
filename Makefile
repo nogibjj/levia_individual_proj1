@@ -3,14 +3,20 @@ install:
 		pip install -r requirements.txt
 
 lint:
-	pylint --disable=R,C --ignore-patterns=test_.*?py *.py
+	nbqa ruff *.ipynb
+	ruff check *.py
 
 format:	
 	black *.py 
+	nbqa black *.ipynb 
 
 test:
 	python -m pytest -vv --cov=main test_*.py
-deploy: 
+	python -m pytest -vv --cov=lib test_*.py
+	python -m pytest -vv --cov=script test_*.py
+	pytest --nbval descriptive.ipynb
+
+deploy:
 
 		
 all: install lint format test 
