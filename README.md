@@ -1,17 +1,28 @@
+# Demo Video
+
+
 # Python_Template
 
 Welcome to my project! This repository contains all the code and resources related to my awesome project.
 
-## Table of Contents
+## Project Structure
 
-- MakeFile
-- .devcontainer
-- requirements.txt
-- cicd.yml
+Jupyter Notebook
+Python Script
+lib.py file: The lib.py file correctly shares the common code between the script and notebook.
+Makefile
+Test files
+  Testing with nbval plugin for pytest
+  The test_script.py and test_lib.py files accurately and efficiently test the Python script and library.
 
 ## MakeFile
 
 The `MakeFile` in this repository is a configuration file used with the `make` command. It defines a set of rules and instructions for building and managing the project. It can be used to automate common tasks such as compiling code, running tests, and more. Be sure to consult the MakeFile for specific commands and targets available for this project.
+
+Running all tests (notebook, script, lib)
+Formatting code with Python black
+Linting code with Ruff
+
 
 ## .devcontainer
 
