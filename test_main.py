@@ -15,7 +15,7 @@ def test_calculate_statistics():
 
 
     # Test the calculate_statistics function
-    result = main.calculate_statistics('test_data.csv')
+    main.calculate_statistics('test_data.csv')
 
     # Verify the expected output
     # assert result['mean']['danceability'] == 0.1
@@ -34,7 +34,7 @@ def test_visualize_data():
 
 
     # Test the visualize_data function
-    result = main.visualize_data('test_data.csv')
+    main.visualize_data('test_data.csv')
 
     # You can add assertions here to check the expected behavior
 
@@ -51,7 +51,7 @@ def test_calculate_correlation():
 
 
     # Test the calculate_correlation function
-    result = main.calculate_correlation('test_data.csv')
+    main.calculate_correlation('test_data.csv')
 
     # You can add assertions here to check the expected behavior
 
