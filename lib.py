@@ -2,8 +2,8 @@ import os
 import polars as pl
 import matplotlib.pyplot as plt
 
-plt.rcParams['font.sans-serif']=['SimHei'] #Show Chinese label
-plt.rcParams['axes.unicode_minus']=False
+# plt.rcParams['font.sans-serif']=['SimHei'] #Show Chinese label
+# plt.rcParams['axes.unicode_minus']=False
 
 def read_csv(file_path):
     print("Successfully read!")
