@@ -1,4 +1,4 @@
-
+import pytest
 import lib
 import polars as pl
 
@@ -14,3 +14,5 @@ def test_calculate_statistics():
     
     lib.calculate_statistics(test_data)
  
+if __name__ == "__main__":
+    pytest.lib()
