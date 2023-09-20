@@ -21,6 +21,7 @@ Welcome to my project! This repository contains all the code and resources relat
 - Pinned requirements.txt
 - GitHub Actions performs all four Makefile commands with badges for each one in the README.md
 
+---
 
 - Jupyter Notebook
 - Python Script
